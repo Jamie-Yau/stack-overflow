@@ -1,0 +1,21 @@
+version: 2 
+
+models:
+  - name: stg_unanswered_posts
+    columns:
+      - name: post_id
+        tests:
+          - unique
+          - not_null
+
+  - name: unanswered_posts_tags
+    columns:
+      - name: tag_id
+        tests:
+          - unique
+          - not_null
+
+      - name: tag_name
+        tests:
+          - unique
+          - not_null
